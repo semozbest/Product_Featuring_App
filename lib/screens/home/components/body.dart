@@ -7,6 +7,7 @@ import 'package:product_featuring/constants.dart';
 import 'package:product_featuring/screens/home/components/recommended_items.dart';
 import 'package:product_featuring/screens/home/components/title_with_more_btn.dart';
 
+import 'featured_itme.dart';
 import 'header_with_searchbox.dart';
 
 class Body extends StatelessWidget {
@@ -20,13 +21,14 @@ class Body extends StatelessWidget {
           HeaderWithSearchBox(size: size),
           Title_with_more_btn(press: (){},txt:"Recommended"),
           Recommended_items(),
+          Title_with_more_btn(txt: "featured", press: (){}),
+          Featured_item(size: size),
+          SizedBox(
+            height: sDefaultPadding,
+          ),
         ],
       ),
     );
   }
 }
-
-
-
-
 
