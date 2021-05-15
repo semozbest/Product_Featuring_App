@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:product_featuring/screens/details/details_screen.dart';
 
 import '../../../constants.dart';
 
@@ -13,26 +14,39 @@ class Recommended_items extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          Recommended_card(
-            image:"assets/images/image_1.png" ,
-            title: "Samantha",
-            country: "Russia",
-            price: 440,
-            press: (){},
-          ),
+            Recommended_card(
+              image:"assets/images/image_1.png" ,
+              title: "Samantha",
+              country: "Russia",
+              price: 440,
+              press: (){
+                Navigator.push(
+                    context, MaterialPageRoute(builder:(context)=>DetailsScreen(),
+                ));
+              },
+            ),
+
           Recommended_card(
             image:"assets/images/image_2.png" ,
             title: "Samantha",
             country: "Russia",
             price: 440,
-            press: (){},
+            press: (){
+              Navigator.push(
+                  context, MaterialPageRoute(builder:(context)=>DetailsScreen(),
+              ));
+            },
           ),
           Recommended_card(
             image:"assets/images/image_3.png" ,
             title: "Samantha",
             country: "Russia",
             price: 440,
-            press: (){},
+            press: (){
+              Navigator.push(
+                  context, MaterialPageRoute(builder:(context)=>DetailsScreen(),
+              ));
+            },
           ),
         ],
       ),
@@ -49,7 +63,7 @@ class Recommended_card extends StatelessWidget {
 
   final String image, title, country;
   final int price;
-  final void Function() press;
+  final  Function() press;
 
   @override
   Widget build(BuildContext context) {
